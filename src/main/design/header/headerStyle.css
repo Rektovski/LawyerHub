@@ -1,0 +1,83 @@
+.carouselSpace {
+    margin: 300px 0 210px 0;
+}
+
+.carouseElementSpace {
+    margin: 0 auto;
+    width: 519px;
+    height: 400px;
+}
+
+.carouselTitle {
+    font-family: 'Source Sans Pro', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 140%;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.carouselSecondaryTitle {
+    font-family: 'Source Sans Pro', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 33px;
+    line-height: 140%;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.carouselBody {
+    font-family: 'Nunito', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 140%;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.carouselButton {
+    z-index: 30;
+    background: #0D90C2;
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 160%;
+    color: #FFFFFF;
+    position: relative;
+    top: 80px;
+    width: 180px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    transition: all .3s ease-in-out;
+}
+
+.carouselButton:hover {
+    transition: .3s;
+    cursor: pointer;
+    background: #121212;
+}
+
+@media (max-width: 1000px) {
+    .carouseElementSpace {
+        width: 355px;
+    }
+
+    .carouselTitle {
+        font-size: 40px;
+    }
+
+    .carouselSecondaryTitle {
+        font-size: 25px;
+    }
+
+    .carouselBody {
+        font-size: 14px;
+    }
+}

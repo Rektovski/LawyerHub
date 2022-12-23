@@ -1,0 +1,8 @@
+.bodyBackgroundImage {
+    background-image: url("bodyBackgroundImage.png");
+    background-color: #cccccc;
+    height: 910px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

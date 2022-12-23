@@ -1,0 +1,82 @@
+.navigationHeaderSpace {
+  background: rgba(39, 39, 39, 0.67);
+}
+
+.navigationHeader {
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigationHeaderLeft, .navigationHeaderRight, .navigationHeaderLeftLeft, .navigationHeaderLeftRight, .navigationHeaderRightRight {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navigationHeaderRightRight {
+  height: 50px;
+  width: 199px;
+  background: white;
+  margin-left: 10px;
+}
+
+.navigationIconLeft {
+  margin: 0 5px 0 5px;
+  filter: brightness(0) saturate(100%) invert(94%) sepia(48%) saturate(0%) hue-rotate(217deg) brightness(111%) contrast(100%);
+}
+
+.navigationIcon {
+  margin: 0 5px 0 5px;
+  cursor: pointer;
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(57deg) brightness(105%) contrast(101%);
+}
+
+.navigationIcon:hover {
+  filter: brightness(0) saturate(100%) invert(65%) sepia(64%) saturate(3694%) hue-rotate(359deg) brightness(101%) contrast(102%);
+}
+
+.navigationIconRight {
+  margin: 0 5px 0 5px;
+  filter: brightness(0) saturate(100%) invert(0%) sepia(84%) saturate(7500%) hue-rotate(329deg) brightness(89%) contrast(114%);
+}
+
+.navigationHeaderLink {
+  font-family: "Nunito", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  color: #FFFFFF;
+}
+
+.navigationHeaderMembership {
+  font-family: "Montserrat", serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 160%;
+  color: #272727;
+}
+
+.navigationHeaderRightRight:hover {
+  transition: 0.3s;
+  cursor: pointer;
+  background: #121212;
+}
+.navigationHeaderRightRight:hover .navigationIconRight {
+  margin: 0 5px 0 5px;
+  filter: brightness(0) saturate(100%) invert(98%) sepia(19%) saturate(0%) hue-rotate(4deg) brightness(103%) contrast(103%);
+}
+.navigationHeaderRightRight:hover .navigationHeaderMembership {
+  color: whitesmoke;
+}
+
+@media (max-width: 1000px) {
+  .navigationHeaderLeft {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=navigationHeader.css.map */
