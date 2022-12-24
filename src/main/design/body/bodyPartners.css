@@ -1,0 +1,38 @@
+.partner {
+    padding: 20px 80px;
+}
+
+.partnerTitle {
+    font-family: 'Source Code Pro', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 140%;
+    color: #000000;
+}
+
+.partnerFigure {
+    width: 31px;
+    height: 4px;
+    background: #0D90C2;
+    margin: 5px 0 20px 0;
+}
+
+.partnerImages {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    mix-blend-mode: multiply;
+    height: 250px;
+}
+
+.partnerImage {
+    margin: 20px 0 20px 0;
+}
+
+@media (max-width: 500px) {
+    .partnerImages {
+        height: 500px;
+    }
+}

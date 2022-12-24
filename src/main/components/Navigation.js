@@ -19,7 +19,6 @@ export default function Navigation() {
                     <img className={'bigCircle'} src={bigCircle} alt={'bigCircle'}/>
                 </div>
             </div>
-
         </>
     )
 }

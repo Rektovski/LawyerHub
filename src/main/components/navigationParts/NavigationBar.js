@@ -1,4 +1,4 @@
-import "../../design/navigation/navigationBarStyle.css";
+import "../../design/navigation/navigationBarStyle.scss";
 import {Container} from "react-bootstrap";
 import barLogo from "../../assets/navigation/navigationBar/Logo.png";
 import {useState} from "react";
@@ -6,7 +6,7 @@ import {useState} from "react";
 export default function NavigationBar() {
     const [menu, setMenu] = useState(false);
     const rect1 = {transform: "rotate(405deg)", position: "relative", top: 7, backgroundColor: "white"};
-    const rect2 = {transform: "rotate(1485deg)", backgroundColor: "white"};
+    const rect2 = {transform: "rotate(1485deg)", position: "relative", backgroundColor: "white"};
     const rect3 = {transform: "rotate(-405deg)", position: "relative", top: -7, backgroundColor: "white"};
 
     return (
@@ -48,7 +48,8 @@ export default function NavigationBar() {
                                         <>
                                             <div className={'menuNavbarLinks'}>
                                                 <div className={'d-flex justify-content-center'}>
-                                                    <img className={'navigationLogo'} src={barLogo} alt={'navigationLogo'}/>
+                                                    <img className={'navigationLogo'} src={barLogo}
+                                                         alt={'navigationLogo'}/>
                                                 </div>
                                                 <div className={'navbarLinks'}>Home</div>
                                                 <div className={'navbarLinks'}>Team</div>

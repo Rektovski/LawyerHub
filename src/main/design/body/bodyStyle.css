@@ -6,3 +6,20 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.bodySecondPart {
+    width: 100%;
+    background: #F5F5F5;
+}
+
+@media (max-width: 1200px) {
+    .bodyBackgroundImage {
+        height: 1300px;
+    }
+}
+
+@media (max-width: 990px) {
+    .bodyBackgroundImage {
+        height: 1674px;
+    }
+}

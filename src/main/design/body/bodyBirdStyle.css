@@ -1,0 +1,87 @@
+.bodyBird {
+    position: relative;
+    top: -54px;
+    width: 1191px;
+    height: 100%;
+    background: #ffffff;
+    margin: 0 auto;
+    padding: 20px 80px;
+}
+
+.bodyBirdTitle {
+    font-family: 'Nunito', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    color: #000000;
+    width: 467px;
+}
+
+.boardPartsSpace {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.boardParts {
+    display: flex;
+    align-items: center;
+    width: 355px;
+    margin: 10px 0 10px 0;
+}
+.birdIcon {
+    margin-right: 10px;
+}
+
+.boardPartText {
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 160%;
+    color: #000000;
+    margin: 10px 0 10px 0;
+}
+
+@media (max-width: 1200px) {
+    .bodyBird {
+        top: -20px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .bodyBird {
+        width: 1191px;
+        margin: 0 auto;
+        top: -42px;
+    }
+
+    .boardParts {
+        width: 355px;
+    }
+
+    .boardPartText {
+        font-size: 15px;
+        line-height: 120%;
+        color: #000000;
+        margin: 0;
+    }
+}
+
+@media (max-width: 555px) {
+    .bodyBird {
+        width: 100%;
+        background: #b44e4e;
+        margin: 0 auto;
+        padding: 20px 40px;
+        height: unset;
+    }
+
+    .boardParts {
+        width: 300px;
+    }
+
+    .boardPartText, .bodyBirdTitle {
+        color: whitesmoke;
+    }
+}
