@@ -1,28 +1,10 @@
 .navigationBackgroundImage {
-    background-image: url("navigationBackground.png");
+    background-image: url("../../assets/navigation/navigationBackground.png");
     background-color: #cccccc;
     height: 1137px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-.navigationCircles {
-    display: flex;
-}
-
-.smallCircle, .bigCircle {
-    position: absolute;
-}
-
-.smallCircle {
-    top: 600px;
-    left: 100px;
-}
-
-.bigCircle {
-    top: 332px;
-    right: 0;
 }
 
 .navigationBackgroundImageCover {
@@ -32,14 +14,4 @@
     width: 100%;
     height: 100%;
     background: rgba(18, 18, 18, 0.8);
-}
-
-@media (max-width: 1000px) {
-    .smallCircle {
-        left: 0;
-    }
-    .bigCircle {
-        top: 600px;
-        width: 600px;
-    }
 }

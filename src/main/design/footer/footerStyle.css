@@ -1,6 +1,22 @@
 .footerSpace {
     width: 100%;
-    background: #121212;
+    letter-spacing: 1px;
+
+    background-image: url("../../assets/footer/footerBackground.png"); /* The image used */
+    background-color: #121212;
+    /*background-color: #cccccc; !* Used if the image is unavailable *!*/
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.footerSpaceBackgroundImageCover {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(18, 18, 18, 0.8);
 }
 
 .footer {
@@ -16,7 +32,7 @@
     width: 300px;
     margin: 20px 0 20px 0;
     padding: 20px;
-    box-shadow: whitesmoke 0 0 10px 10px;
+    box-shadow: whitesmoke 0 0 3px 1px;
     border-radius: 10px;
 }
 
@@ -38,6 +54,10 @@
     font-size: 16px;
     line-height: 100%;
     color: #FFFFFF;
+}
+
+.footerCardBodyText {
+    padding: 5px;
 }
 
 .footerEmailLabel {
@@ -79,17 +99,6 @@
 
 .footerIcon:hover {
     filter: brightness(0) saturate(100%) invert(65%) sepia(64%) saturate(3694%) hue-rotate(359deg) brightness(101%) contrast(102%);
-}
-
-.footerLeftImage {
-    position: absolute;
-    top: 3810px;
-}
-
-.footerRightImage {
-    position: absolute;
-    top: 3970px;
-    right: 0;
 }
 
 @media (max-width: 768px) {

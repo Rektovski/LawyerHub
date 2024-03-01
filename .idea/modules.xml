@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../LaywerHub/.idea/LaywerHub.iml" filepath="$PROJECT_DIR$/../LaywerHub/.idea/LaywerHub.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/LawyerHub.iml" filepath="$PROJECT_DIR$/.idea/LawyerHub.iml" />
     </modules>
   </component>
 </project>

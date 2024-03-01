@@ -1,7 +1,6 @@
 import "../../design/body/bodyAboutUs.css";
 import {Container} from "react-bootstrap";
 import bodyAboutUsImage from "../../assets/body/bodyAboutUs/bodyAboutUsImage.png";
-import bodyAboutUsBottomRightDecoration from "../../assets/body/bodyAboutUs/Group 49.png";
 
 export default function BodyAboutUs() {
     return (
@@ -28,8 +27,6 @@ export default function BodyAboutUs() {
                             <img className={'bodyAboutUsImage'} src={bodyAboutUsImage} alt={'bodyAboutUsImage'}/>
                         </div>
                     </div>
-                    <img className={'bodyAboutUsBottomRightDecoration'} src={bodyAboutUsBottomRightDecoration}
-                         alt={'bodyAboutUsBottomRightDecoration'}/>
                 </Container>
             </div>
         </>

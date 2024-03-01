@@ -67,13 +67,6 @@
     height: 100%;
 }
 
-.bodyAboutUsBottomRightDecoration {
-    position: relative;
-    top: -255px;
-    left: 60px;
-    float: right;
-}
-
 @media (max-width: 990px) {
     .bodyAboutUsLeft {
         margin-top: 20px;
