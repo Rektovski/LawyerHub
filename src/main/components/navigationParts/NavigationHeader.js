@@ -1,4 +1,4 @@
-import "../../design/navigation/navigationHeader.css";
+import "../../design/navigationHeader.css";
 import {Container} from "react-bootstrap";
 import {BsTelephone as TeleIcon} from "react-icons/bs";
 import {CiMail as MailIcon} from "react-icons/ci";

@@ -1,34 +1,45 @@
-import "../../design/body/bodyAboutUs.css";
-import {Container} from "react-bootstrap";
+import React from 'react';
+import "../../design/bodyAboutUs.css";
 import bodyAboutUsImage from "../../assets/body/bodyAboutUs/bodyAboutUsImage.png";
 
 export default function BodyAboutUs() {
     return (
-        <>
-            <div>
-                <Container>
-                    <div className={'bodyAboutUs'}>
-                        <div className={'bodyAboutUsLeft'}>
-                            <div className={'bodyAboutUsTitle'}>ABOUT US</div>
-                            <figure className={'horizontalLine'}></figure>
-                            <div className={'bodyAboutUsBody'}>
-                                The Lawyers Hub exists to provide a nexus between Law
-                                and Technology and uses technology as a leverage and
-                                improve access to justice and the business of law.
-                            </div>
-                            <div className={'bodyAboutUsBody'}>
-                                Community of Lawyers in Africa promoting Access to
-                                Justice through Innovation and Technology.
-                            </div>
-                            <div className={'bodyAboutUsSignature'}>Linda Bonyo</div>
-                            <div className={'bodyAboutUsPosition'}>Founder of the Lawyers Hub</div>
-                        </div>
-                        <div className={'bodyAboutUsImageSpace'}>
-                            <img className={'bodyAboutUsImage'} src={bodyAboutUsImage} alt={'bodyAboutUsImage'}/>
+        <section className="about-editorial-section">
+            <div className="light-engine">
+                <div className="light-orb gold-main"></div>
+                <div className="light-orb white-soft"></div>
+                <div className="light-orb gold-secondary"></div>
+                <div className="light-orb accent-flare"></div>
+            </div>
+
+            <div className="container about-editorial-grid">
+                <div className="editorial-text">
+                    <div className="accent-tag">EST. 1998 — NAIROBI</div>
+                    <h2 className="editorial-title">
+                        A Nexus of <br/>
+                        <span className="serif-italic">Law & Innovation</span>
+                    </h2>
+                    <div className="minimal-divider"></div>
+                    <p className="editorial-paragraph">
+                        The Lawyers Hub exists to provide a bridge between legal systems and
+                        frontier technology. We leverage innovation to redefine justice
+                        and the business of law across Africa.
+                    </p>
+                    <div className="editorial-footer">
+                        <div className="sig-wrapper">
+                            <span className="sig-text">Linda Bonyo</span>
+                            <span className="sig-sub">FOUNDER & CEO</span>
                         </div>
                     </div>
-                </Container>
+                </div>
+
+                <div className="editorial-visual">
+                    <div className="image-stage">
+                        <div className="glass-backdrop"></div>
+                        <img src={bodyAboutUsImage} alt="Founder" className="editorial-img" />
+                    </div>
+                </div>
             </div>
-        </>
-    )
+        </section>
+    );
 }

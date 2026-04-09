@@ -1,0 +1,46 @@
+.bird-content {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.bird-heading {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 42px;
+    color: #ffffff;
+    line-height: 1.2;
+}
+
+.bird-sub {
+    color: #C5A059;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 12px;
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+.bird-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.bird-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 15px;
+}
+
+.bird-icon {
+    color: #C5A059;
+    font-size: 20px;
+}
+
+@media (max-width: 900px) {
+    .bird-content { grid-template-columns: 1fr; }
+    .bird-grid { grid-template-columns: 1fr; }
+}

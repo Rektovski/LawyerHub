@@ -1,0 +1,159 @@
+/* --- Core Container --- */
+.hero-container {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    background-color: #0a0a0a;
+}
+
+/* --- Background Image & Animated Blobs --- */
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/navigation/navigationBackground.png');
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.4);
+    z-index: 1;
+    overflow: hidden;
+}
+
+/* Base style for blurry animations */
+.ambient-blob {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    /* Subtle gold glow */
+    background: radial-gradient(circle, rgba(197, 160, 89, 0.12) 0%, transparent 70%);
+    filter: blur(100px);
+    pointer-events: none;
+    z-index: 2;
+}
+
+.blob-gold-top {
+    top: -10%;
+    right: -5%;
+    animation: drift-slow 25s infinite ease-in-out;
+}
+
+.blob-gold-bottom {
+    bottom: -10%;
+    left: 10%;
+    background: radial-gradient(circle, rgba(197, 160, 89, 0.08) 0%, transparent 70%);
+    animation: drift-alternate 30s infinite ease-in-out;
+}
+
+/* --- Readability Overlay --- */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0.8) 0%,
+            rgba(0, 0, 0, 0.3) 100%
+    ),
+    linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.6) 0%,
+            transparent 25%
+    );
+    z-index: 3;
+}
+
+/* --- Content Layout --- */
+.hero-content {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    padding: 0 5%; /* Adjust based on your global container padding */
+}
+
+.hero-text-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 800px;
+}
+
+/* --- Typography --- */
+.hero-establishment {
+    color: #C5A059;
+    font-weight: 600;
+    letter-spacing: 4px;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.hero-main-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(3rem, 8vw, 5.5rem);
+    line-height: 1.1;
+    color: #ffffff;
+    margin: 0;
+}
+
+.gold-text {
+    color: #C5A059;
+}
+
+.hero-description {
+    max-width: 600px;
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+    margin-top: 10px;
+}
+
+/* --- Button Styling --- */
+.btn-consult {
+    background-color: #C5A059;
+    color: #000;
+    border: none;
+    padding: 18px 45px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    width: fit-content;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-consult:hover {
+    transform: translateY(-3px);
+    background-color: #e2c285;
+    box-shadow: 0 10px 30px rgba(197, 160, 89, 0.4);
+}
+
+/* --- Animations --- */
+@keyframes drift-slow {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(50px, 80px) scale(1.1); }
+    66% { transform: translate(-30px, 40px) scale(0.9); }
+}
+
+@keyframes drift-alternate {
+    0%, 100% { transform: translate(0, 0) scale(1.1); }
+    50% { transform: translate(60px, -40px) scale(1); }
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    .hero-main-title {
+        font-size: 3rem;
+    }
+    .ambient-blob {
+        width: 300px;
+        height: 300px;
+    }
+}

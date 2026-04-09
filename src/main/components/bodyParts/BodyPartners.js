@@ -1,29 +1,21 @@
-import "../../design/body/bodyPartners.css";
-import {Container} from "react-bootstrap";
-import partnerImage1 from "../../assets/body/bodyPartner/lsk.png";
-import partnerImage2 from "../../assets/body/bodyPartner/ntweek.png";
-import partnerImage3 from "../../assets/body/bodyPartner/ibm_PNG19658.png";
-import partnerImage4 from "../../assets/body/bodyPartner/1_9DOIuxGtRPKdXUmgHkmaKQ.png";
+import '../../design/bodyPartners.css';
+import React from 'react';
+import ibm from "../../assets/body/bodyPartner/ibm.png"
+import kenya from "../../assets/body/bodyPartner/kenya.png"
+import morga from "../../assets/body/bodyPartner/morga.png"
+import ntweek from "../../assets/body/bodyPartner/ntweek.png"
 
 export default function BodyPartners() {
     return (
-        <>
-            <div>
-                <Container>
-                    <div className={'partner'}>
-                        <div className={'partnerTitle'}>
-                            Our Partners
-                        </div>
-                        <figure className={'partnerFigure'}></figure>
-                        <div className={'partnerImages'}>
-                            <img className={'partnerImage'} src={partnerImage1} alt={'partnerImage'}/>
-                            <img className={'partnerImage'} src={partnerImage2} alt={'partnerImage'}/>
-                            <img className={'partnerImage'} src={partnerImage3} alt={'partnerImage'}/>
-                            <img className={'partnerImage'} src={partnerImage4} alt={'partnerImage'}/>
-                        </div>
-                    </div>
-                </Container>
+        <div className="container">
+            <h4 className="partners-label">TRUSTED BY INDUSTRY LEADERS</h4>
+            <div className="partners-flex">
+                {/* Replace src with your actual partner images */}
+                <img src={ibm} alt="Partner" className="partner-logo" />
+                <img src={kenya} alt="Partner" className="partner-logo" />
+                <img src={morga} alt="Partner" className="partner-logo" />
+                <img src={ntweek} alt="Partner" className="partner-logo" />
             </div>
-        </>
-    )
+        </div>
+    );
 }

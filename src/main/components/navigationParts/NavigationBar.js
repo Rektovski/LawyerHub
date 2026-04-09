@@ -1,4 +1,4 @@
-import "../../design/navigation/navigationBarStyle.scss";
+import "../../design/navigationBarStyle.scss";
 import {Container} from "react-bootstrap";
 import barLogo from "../../assets/navigation/navigationBar/Logo.png";
 import {useState} from "react";

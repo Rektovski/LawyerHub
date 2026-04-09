@@ -1,64 +1,69 @@
-import "../design/footer/footerStyle.css";
-import {FormControl, FormLabel, Input} from "@chakra-ui/react";
-import {useState} from "react";
-import {FiFacebook as FBIcon, FiInstagram as InIcon, FiLinkedin as LnIcon, FiTwitter as TWIcon} from "react-icons/fi";
-import {Container, Form} from "react-bootstrap";
+import "../design/footer.css";
+import React, { useState } from "react";
+import { FiFacebook, FiInstagram, FiLinkedin, FiTwitter } from "react-icons/fi";
 
 export default function Footer() {
     const [email, setEmail] = useState("");
 
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        setEmail("");
+        alert("Thank you for subscribing.");
+    };
+
     return (
-        <>
-            <div className={'footerSpace'}>
-                <div className={'footerSpaceBackgroundImageCover'}>
-                    <Container>
-                        <div className={'footer'}>
-                            <div className={'footerCard'}>
-                                <div className={'footerCardTitle'}>Address</div>
-                                <div className={'footerCardBody'}>Bishop Road First Ngong Ave, Nairobi, Kenya</div>
-                            </div>
-                            <div className={'footerCard'}>
-                                <div className={'footerCardTitle'}>Contact</div>
-                                <div className={'footerCardBody'}>
-                                    <div className={'footerCardBodyText'}>Email: info@lawyershub.ke</div>
-                                    <div className={'footerCardBodyText'}>Phone: +254 784 840 228</div>
-                                </div>
-                            </div>
-                            <div className={'footerCard'}>
-                                <div className={'footerCardTitle'}>Newsletter</div>
-                                <div className={'footerCardBody'}>Stay updated by subscribing to our newsletter</div>
-                                <Form onSubmit={(event) => {
-                                    event.preventDefault();
-                                    setEmail("");
-                                }}
-                                >
-                                    <FormControl variant="floating" id="first-name" isRequired isInvalid>
-                                        <FormLabel className={'footerEmailLabel'}>Email:</FormLabel>
-                                        <Input
-                                            className={'bg-light'}
-                                            placeholder="Enter Email"
-                                            value={email}
-                                            onChange={(event) => setEmail(event.target.value)}
-                                        />
-                                    </FormControl>
-                                    <button type={'submit'} className={'footerFormButton'}>
-                                        Subscribe
-                                    </button>
-                                </Form>
-                            </div>
-                            <div className={'footerCard'}>
-                                <div className={'footerCardTitle'}>Follow us</div>
-                                <div className={'footerIconSpace'}>
-                                    <FBIcon size={20} className={'footerIcon'}/>
-                                    <TWIcon size={20} className={'footerIcon'}/>
-                                    <LnIcon size={20} className={'footerIcon'}/>
-                                    <InIcon size={20} className={'footerIcon'}/>
-                                </div>
-                            </div>
-                        </div>
-                    </Container>
+        <footer className="footer-wrapper">
+            <div className="container footer-content">
+                <div className="footer-brand-column">
+                    <div className="footer-logo">
+                        LAWYER<span>HUB</span>
+                    </div>
+                    <p className="footer-tagline">
+                        Leading the nexus of Law and Technology across the continent.
+                        Excellence in every detail.
+                    </p>
+                    <div className="footer-socials">
+                        <FiFacebook className="social-icon" />
+                        <FiTwitter className="social-icon" />
+                        <FiLinkedin className="social-icon" />
+                        <FiInstagram className="social-icon" />
+                    </div>
+                </div>
+
+                <div className="footer-info-grid">
+                    <div className="footer-column">
+                        <h4 className="footer-label">Address</h4>
+                        <p>Bishop Road First Ngong Ave</p>
+                        <p>Nairobi, Kenya</p>
+                    </div>
+
+                    <div className="footer-column">
+                        <h4 className="footer-label">Contact</h4>
+                        <p>info@lawyershub.ke</p>
+                        <p>+254 784 840 228</p>
+                    </div>
+
+                    <div className="footer-column newsletter-col">
+                        <h4 className="footer-label">Newsletter</h4>
+                        <form className="footer-form" onSubmit={handleSubmit}>
+                            <input
+                                type="email"
+                                placeholder="Email Address"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                                required
+                            />
+                            <button type="submit">Subscribe</button>
+                        </form>
+                    </div>
                 </div>
             </div>
-        </>
-    )
+
+            <div className="footer-bottom">
+                <div className="container">
+                    <p>&copy; 2026 LawyerHub. All Rights Reserved.</p>
+                </div>
+            </div>
+        </footer>
+    );
 }

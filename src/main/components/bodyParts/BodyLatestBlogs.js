@@ -1,37 +1,34 @@
-import "../../design/body/bodyLatestBlogsStyle.css";
-import {Container} from "react-bootstrap";
-import {blogList} from "../../helper/blogList";
+import '../../design/bodyLatestBlogs.css';
+import React from 'react';
+import image1 from "../../assets/body/bodyList/1.jpg"
+import image2 from "../../assets/body/bodyList/2.jpg"
+import image3 from "../../assets/body/bodyList/3.jpg"
 
 export default function BodyLatestBlogs() {
+    const images = [image1, image2, image3];
+
     return (
-        <>
-            <Container>
-                <div className={'blogs'}>
-                    <div className={'blogTitle'}>
-                        LATEST BLOGS
-                    </div>
-                    <figure className={'blogFigure'}></figure>
-                    <div className={'blogArticle'}>
-                        You can rely on our stunning team for the latest in the LawTech blogs and taking time to peruse will
-                        be great experience for you without a doubt
-                    </div>
-                    <div className={'blogCards'}>
-                        {
-                            blogList.map((item, id) => (
-                                <div key={id} className={'blogCard'}>
-                                    <img className={'blogImage'} src={item.image} alt={'blogImage'}/>
-                                    <div className={'blogCardBodySpace'}>
-                                        <div className={'blogCardDate'}>{item.date}</div>
-                                        <div className={'blogCardTitle'}>{item.title}</div>
-                                        <div className={'blogCardBody'}>{item.body}</div>
-                                        <div className={'blogButton'}>Read More</div>
-                                    </div>
-                                </div>
-                            ))
-                        }
-                    </div>
-                </div>
-            </Container>
-        </>
-    )
+        <div className="container">
+            <div className="blog-header">
+                <span className="gold-tag">INSIGHTS</span>
+                <h2 className="section-title">Latest LawTech Blogs</h2>
+            </div>
+
+            <div className="blog-grid-modern">
+                {/* Map your blogList here */}
+                {[1, 2, 3].map((item, id) => (
+                    <article key={id} className="blog-card-modern">
+                        <div className="blog-img-wrap">
+                            <img src={images[id]} alt="blog" />
+                        </div>
+                        <div className="blog-info">
+                            <span className="blog-date">APRIL 09, 2026</span>
+                            <h3>The Future of Digital Litigation</h3>
+                            <button className="blog-read-btn">Read Article</button>
+                        </div>
+                    </article>
+                ))}
+            </div>
+        </div>
+    );
 }

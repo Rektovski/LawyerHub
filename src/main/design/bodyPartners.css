@@ -1,0 +1,44 @@
+/* Ensure the section has a clear background */
+.partners-section {
+    padding: 80px 0;
+    background-color: #080808; /* Match your deep body color */
+}
+
+.partners-label {
+    text-align: center;
+    font-size: 24px;
+    letter-spacing: 5px;
+    color: rgba(0, 0, 0, 0.4); /* Subtle gray text */
+    margin-bottom: 50px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.partners-flex {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 60px;
+    /* Optional: very subtle divider */
+    border-top: 1px solid rgba(197, 160, 89, 0.1);
+    padding-top: 40px;
+}
+
+/* Use this ONLY if the background is WHITE/LIGHT */
+.partner-logo {
+    max-height: 65px;
+    opacity: 0.5;
+    transition: 0.4s ease;
+}
+
+.partner-logo:hover {
+    filter: grayscale(0) contrast(1);
+    opacity: 1;
+}
+
+@media (max-width: 800px) {
+    .partner-logo {
+        max-height: 35px;
+    }
+}

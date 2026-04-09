@@ -1,36 +1,30 @@
-import "../../design/body/bodyBirdStyle.css";
-import birdIcon from "../../assets/body/bodyBoard/done_24px.png";
+import '../../design/bodyBird.css';
+import React from 'react';
+import { FiCheckCircle } from 'react-icons/fi'; // Minimalist check icon
 
 export default function BodyBird() {
+    const points = [
+        "Start Up Incubation",
+        "Co-Innovation Space for Lawyers",
+        "Strategic Mentorship",
+        "Policy Support for Innovators",
+        "Legal Tech Integration"
+    ];
+
     return (
-        <>
-            <div className={'bodyBird'}>
-                <div className={'bodyBirdTitle'}>
-                    The lawyers’ hub offers the nexus between Tech and the Law in the following ways:
-                </div>
-                <div className={'boardPartsSpace'}>
-                    <div className={'boardParts'}>
-                        <img className={'birdIcon'} src={birdIcon} alt={'birdIcon'}/>
-                        <div className={'boardPartText'}>Start Up incubation.</div>
-                    </div>
-                    <div className={'boardParts'}>
-                        <img className={'birdIcon'} src={birdIcon} alt={'birdIcon'}/>
-                        <div className={'boardPartText'}>Start Up incubation.</div>
-                    </div>
-                    <div className={'boardParts'}>
-                        <img className={'birdIcon'} src={birdIcon} alt={'birdIcon'}/>
-                        <div className={'boardPartText'}>Co-Innovation Space for Lawyers.</div>
-                    </div>
-                    <div className={'boardParts'}>
-                        <img className={'birdIcon'} src={birdIcon} alt={'birdIcon'}/>
-                        <div className={'boardPartText'}>Mentorship.</div>
-                    </div>
-                    <div className={'boardParts'}>
-                        <img className={'birdIcon'} src={birdIcon} alt={'birdIcon'}/>
-                        <div className={'boardPartText'}>Legal and Policy Support for Startups and innovators.</div>
-                    </div>
-                </div>
+        <div className="container bird-content">
+            <div className="bird-text-side">
+                <h2 className="bird-heading">The Nexus of Tech & Law</h2>
+                <p className="bird-sub">Advancing the legal frontier through innovation.</p>
             </div>
-        </>
-    )
+            <div className="bird-grid">
+                {points.map((text, i) => (
+                    <div key={i} className="bird-item">
+                        <FiCheckCircle className="bird-icon" />
+                        <span>{text}</span>
+                    </div>
+                ))}
+            </div>
+        </div>
+    );
 }

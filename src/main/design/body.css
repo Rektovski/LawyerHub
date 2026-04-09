@@ -1,0 +1,32 @@
+.main-body-wrapper {
+    background-color: #0a0a0a;
+    color: #ffffff;
+}
+
+.section-padding {
+    padding: 120px 0;
+}
+
+.section-overlap {
+    margin-top: -100px; /* Pulls cards over the hero image */
+    position: relative;
+    z-index: 20;
+}
+
+.section-dark-alt {
+    background-color: #111111;
+    padding: 80px 0;
+}
+
+.section-partners {
+    background: white; /* Partners usually need white for logo visibility */
+    padding: 60px 0;
+}
+
+/* Reusable Gold Line */
+.gold-line {
+    width: 40px;
+    height: 2px;
+    background: #C5A059;
+    margin: 15px 0;
+}
