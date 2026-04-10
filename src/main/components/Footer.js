@@ -60,8 +60,21 @@ export default function Footer() {
             </div>
 
             <div className="footer-bottom">
-                <div className="container">
-                    <p>&copy; 2026 LawyerHub. All Rights Reserved.</p>
+                <div className="container footer-bottom-container">
+                    <div className="footer-legal-links">
+                        <span>&copy; {new Date().getFullYear()} LAWYERHUB. ALL RIGHTS RESERVED.</span>
+                    </div>
+
+                    <div className="developer-credit">
+                        <a
+                            href="https://otarmurmanishvili.netlify.app/"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="dev-link"
+                        >
+                            DESIGNED & DEVELOPED BY OTAR MURMANISHVILI
+                        </a>
+                    </div>
                 </div>
             </div>
         </footer>
